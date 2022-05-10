@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>updown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 12%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid green;
+        }
+        .fa-brands {
+            display: inline-block;
+            font-size: 50px;
+            animation: updown 3s ease-in-out infinite;
+            transition: 2s;
+        }
+        .fa-facebook{
+            animation-delay: 1s;
+        }
+        .fa-twitter-square {
+            animation-delay: 2s;
+        }
+        @keyframes updown {
+            0% {
+                transform: translateY(0);
+                color: green;
+            }
+            25% {
+                color: blue;
+            }
+            50% {
+                transform: translateY(-25px);
+                color: rgb(179, 175, 175);
+            }
+            100% {
+                transform: translateY(0);
+                color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span><i class="fa-brands fa-instagram"></i></span>
+        <span><i class="fa-brands fa-facebook"></i></span>
+        <span><i class="fa-brands fa-twitter-square"></i></span>
+    </div>
+</body>
+</html>
